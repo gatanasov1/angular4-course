@@ -1,4 +1,5 @@
-.warn {
+p {
+  padding:15px;
+  border: 1px solid darkorange;
   background-color: gold;
-  width:150px
 }
