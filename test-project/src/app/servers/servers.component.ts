@@ -11,6 +11,7 @@ export class ServersComponent implements OnInit {
   serverCount = 0;
   serverStatus = "";
   serverName = "";
+  servers = ["test1", "test2"];
 
   constructor() {
     this.addServerAllowed = true;
@@ -20,7 +21,9 @@ export class ServersComponent implements OnInit {
   }
 
   onAddServerClicked() {
+    this.serverCount++;
     this.serverStatus = "Server was created, name was "+this.serverName ;
+    this.servers.push(this.serverName);
   }
 
   onServerName(event) {

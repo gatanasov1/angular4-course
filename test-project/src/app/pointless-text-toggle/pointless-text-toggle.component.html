@@ -1,0 +1,10 @@
+<button class="btn btn-primary" (click)="toggleText()">Display Details</button>
+<p *ngIf="textToggle">
+  This text is a secret SSHHHHHHH
+</p>
+
+<ul>
+  <li *ngFor="let number of pointlessListOfNumbers;let i = index" [ngStyle]="{ color: isSpecial(i)? 'white': 'black' }" [ngClass]="{ special: isSpecial(i) }">
+      {{number}}
+  </li>
+</ul>
