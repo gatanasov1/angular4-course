@@ -3,6 +3,7 @@
     <button class="btn btn-success">New Recipe</button>
   </div>
 </div>
+<hr>
 <div class="row">
   <div class="col-xs-12">
 
@@ -12,7 +13,7 @@
         <p class="list-group-item-text">{{ recipe.description }}</p>
       </span>
       <span class="pull-right">
-        <img [src]="recipe.imagePath" alt="" calss="img-responsive" style="max-height:50px">
+        <img src="{{ recipe.imagePath }}" alt="{{ recipe.name }}" calss="img-responsive" style="max-height:50px">
       </span>
     </a>
 
