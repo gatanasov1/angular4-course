@@ -8,20 +8,18 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 export class AddServerFormComponent implements OnInit {
   @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   @Output() blueprintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
-  newServerName = '';
-  newServerContent = '';
 
-  onAddServer() {
+  onAddServer(serverName, serverContent) {
     this.serverCreated.emit({
-      serverName: this.newServerName,
-      serverContent: this.newServerContent
+      serverName: serverName,
+      serverContent: serverContent
     });
   }
 
-  onAddBlueprint() {
+  onAddBlueprint(serverName, serverContent) {
     this.blueprintCreated.emit({
-      serverName: this.newServerName,
-      serverContent: this.newServerContent
+      serverName: serverName,
+      serverContent: serverContent
     });
   }
   constructor() { }
