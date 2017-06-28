@@ -1,0 +1,27 @@
+<p>{{character.name}}</p>
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+      <label>Level</label>
+      <p>{{character.level}}</p>
+      <hr>
+    </div>
+    <div class="container" *ngFor="let attribute of character.attributes">
+      <div class="row">
+        <div class="col-xs-2">{{attribute.name}}</div>
+        <div class="col-xs-1">{{attribute.modifiedValue}}</div>
+        <div class="col-xs-2">
+
+          <button type="button" data-type="plus" class="btn" [disabled]="!canDecrement()">
+            <span class="glyphicon glyphicon-minus" (click)="decrementAttribute(attribute)" ></span>
+          </button>
+
+          <button type="button" data-type="plus" class="btn" [disabled]="!canIncrement()">
+            <span class="glyphicon glyphicon-plus" (click)="attribute.modifiedValue = attribute.modifiedValue+1"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

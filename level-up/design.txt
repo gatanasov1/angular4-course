@@ -1,0 +1,18 @@
+Character level up screen
+
+| Character 1 | Character 2 | Character 3|/
+
+Character Name                         
+   Level 5
+	Strength -+
+	Vitality -+
+	Resistence -+                          IMAGE
+						(image OR final stats)
+	
+						Damage
+						Defence
+						Health
+						
+									| Cancel | Save |
+									OR
+									| Level Up |
